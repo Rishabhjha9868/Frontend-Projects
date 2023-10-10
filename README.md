@@ -1,5 +1,4 @@
 # Frontend-Projects
+This is the mini project using Html css and Javascript namely Blur Background.
 
-Here i push my Anime maker Project which i make using Html, Css and Javascript
-
-Basically this is a very simple anime generator app using api name catboy.com
+On the template whereever you move your cursor that will become clear and rest of the part became blur
