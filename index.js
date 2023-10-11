@@ -1,17 +1,24 @@
-const containerEl = document.querySelector(".container");
+const btnEl = document.getElementById("btn");
+const bmiInputEl = document.getElementById("bmi-result");
+const weightConditionEl = document.getElementById("weight-condition");
 
-const btnEl = document.querySelector(".btn");
+function calculateBMI() {
+  const heightValue = document.getElementById("height").value / 100;
+  const weightValue = document.getElementById("weight").value;
 
-const popupContainerEl = document.querySelector(".popup-container");
+  const bmiValue = weightValue / (heightValue * heightValue);
 
-const closeIconEl = document.querySelector(".close-icon");
+  bmiInputEl.value = bmiValue;
 
-btnEl.addEventListener("click", () => {
-  containerEl.classList.add("active");
-  popupContainerEl.classList.remove("active");
-});
+  if (bmiValue < 18.5) {
+    weightConditionEl.innerText = "Under weight";
+  } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
+    weightConditionEl.innerText = "Normal weight";
+  } else if (bmiValue >= 25 && bmiValue <= 29.9) {
+    weightConditionEl.innerText = "Overweight";
+  } else if (bmiValue >= 30) {
+    weightConditionEl.innerText = "Obesity";
+  }
+}
 
-closeIconEl.addEventListener("click", () => {
-  containerEl.classList.remove("active");
-  popupContainerEl.classList.add("active");
-});
+btnEl.addEventListener("click", calculateBMI);
