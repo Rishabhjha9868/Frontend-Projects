@@ -1,24 +1,10 @@
-const btnEl = document.getElementById("btn");
-const bmiInputEl = document.getElementById("bmi-result");
-const weightConditionEl = document.getElementById("weight-condition");
+const btnEl = document.querySelector(".btn");
 
-function calculateBMI() {
-  const heightValue = document.getElementById("height").value / 100;
-  const weightValue = document.getElementById("weight").value;
+btnEl.addEventListener("mouseover", (event) => {
+  const x = event.pageX - btnEl.offsetLeft;
+  const y = event.pageY - btnEl.offsetTop;
 
-  const bmiValue = weightValue / (heightValue * heightValue);
-
-  bmiInputEl.value = bmiValue;
-
-  if (bmiValue < 18.5) {
-    weightConditionEl.innerText = "Under weight";
-  } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
-    weightConditionEl.innerText = "Normal weight";
-  } else if (bmiValue >= 25 && bmiValue <= 29.9) {
-    weightConditionEl.innerText = "Overweight";
-  } else if (bmiValue >= 30) {
-    weightConditionEl.innerText = "Obesity";
-  }
-}
-
-btnEl.addEventListener("click", calculateBMI);
+  btnEl.style.setProperty("--xPos", x + "px");
+  btnEl.style.setProperty("--yPos", y + "px");
+});
+ 
