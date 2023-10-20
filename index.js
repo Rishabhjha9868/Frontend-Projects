@@ -1,10 +1,24 @@
-const btnEl = document.querySelector(".btn");
+const inputEl = document.querySelector(".input");
 
-btnEl.addEventListener("mouseover", (event) => {
-  const x = event.pageX - btnEl.offsetLeft;
-  const y = event.pageY - btnEl.offsetTop;
+const bodyEl = document.querySelector("body");
 
-  btnEl.style.setProperty("--xPos", x + "px");
-  btnEl.style.setProperty("--yPos", y + "px");
+inputEl.checked = JSON.parse(localStorage.getItem("mode"));
+
+updateBody();
+
+function updateBody() {
+  if (inputEl.checked) {
+    bodyEl.style.background = "black";
+  } else {
+    bodyEl.style.background = "white";
+  }
+}
+
+inputEl.addEventListener("input", () => {
+  updateBody();
+  updateLocalStorage();
 });
- 
+
+function updateLocalStorage() {
+  localStorage.setItem("mode", JSON.stringify(inputEl.checked));
+}
