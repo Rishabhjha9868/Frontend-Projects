@@ -7,4 +7,5 @@ On the Anime pic generator i made a button on which just click, Results a new an
 BMI calculator using HTML ,CSS and JAVASCRIPT.
 
 => There are more than eight project upload in the Folder.
+
 => dark mode toggle button.
