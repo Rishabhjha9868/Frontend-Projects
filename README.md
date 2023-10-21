@@ -8,4 +8,4 @@ BMI calculator using HTML ,CSS and JAVASCRIPT.
 
 => There are more than eight project upload in the Folder.
 
-=> dark mode toggle button.
+=> Dark mode toggle button.
