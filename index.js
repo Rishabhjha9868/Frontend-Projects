@@ -1,24 +1,30 @@
-const inputEl = document.querySelector(".input");
+const hourEl = document.getElementById("hour");
+const minuteEl = document.getElementById("minutes");
+const secondEl = document.getElementById("seconds");
+const ampmEl = document.getElementById("ampm");
 
-const bodyEl = document.querySelector("body");
+function updateClock() {
+  let h = new Date().getHours();
+  let m = new Date().getMinutes();
+  let s = new Date().getSeconds();
+  let ampm = "AM";
 
-inputEl.checked = JSON.parse(localStorage.getItem("mode"));
-
-updateBody();
-
-function updateBody() {
-  if (inputEl.checked) {
-    bodyEl.style.background = "black";
-  } else {
-    bodyEl.style.background = "white";
+  if (h > 12) {
+    h = h - 12;
+    ampm = "PM";
   }
+
+  h = h < 10 ? "0" + h : h;
+  m = m < 10 ? "0" + m : m;
+  s = s < 10 ? "0" + s : s;
+
+  hourEl.innerText = h;
+  minuteEl.innerText = m;
+  secondEl.innerText = s;
+  ampmEl.innerText = ampm;
+  setTimeout(() => {
+    updateClock();
+  }, 1000);
 }
 
-inputEl.addEventListener("input", () => {
-  updateBody();
-  updateLocalStorage();
-});
-
-function updateLocalStorage() {
-  localStorage.setItem("mode", JSON.stringify(inputEl.checked));
-}
+updateClock();
