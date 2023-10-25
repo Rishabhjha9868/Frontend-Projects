@@ -1,35 +1,16 @@
-const rating = document.querySelector(".emoji1");
-const ratingEls = document.querySelectorAll(".rating");
-const btnEl = document.getElementById("btn");
+const bodyEl = document.querySelector("body");
 
-const containerEl = document.getElementById("container");
-
-let selectedRating = "";
-
-ratingEls.forEach((ratingEl) => {
-  ratingEl.addEventListener("click", (event) => {
-    removeActive();
-    selectedRating =
-      event.target.innerText || event.target.parentNode.innerText;
-    event.target.classList.add("active");
-    event.target.parentNode.classList.add("active");
-  });
+bodyEl.addEventListener("mousemove", (event) => {
+  const xPos = event.offsetX;
+  const yPos = event.offsetY;
+  const spanEl = document.createElement("span");
+  spanEl.style.left = xPos + "px";
+  spanEl.style.top = yPos + "px";
+  const size = Math.random() * 100;
+  spanEl.style.width = size + "px";
+  spanEl.style.height = size + "px";
+  bodyEl.appendChild(spanEl);
+  setTimeout(() => {
+    spanEl.remove();
+  }, 3000);
 });
-
-btnEl.addEventListener("click", () => {
-  if (selectedRating !== "") {
-    containerEl.innerHTML = `
-        <strong>Thank you!</strong>
-        <br>
-        <br>
-        <strong>Feedback: ${selectedRating}</strong>
-        <p>We'll use your feedback to improve our customer support.</p>
-        `;
-  }
-});
-
-function removeActive() {
-  ratingEls.forEach((ratingEl) => {
-    ratingEl.classList.remove("active");
-  });
-}
