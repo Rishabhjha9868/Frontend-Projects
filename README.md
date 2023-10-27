@@ -14,6 +14,6 @@ This is the project, which i refer to all the viewers.
 This is english dictionary and in this project.
 
  
- My new project is  feedback UI.
+ My last project is  feedback UI.
  
  My last project is Heart trail animation.
