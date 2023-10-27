@@ -12,7 +12,6 @@ BMI calculator using HTML ,CSS and JAVASCRIPT.
 This is the project, which i refer to all the viewers.
 
 This is english dictionary and in this project.
-
  My last project is  feedback UI.
  
  My last project is Heart trail animation.
