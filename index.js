@@ -1,16 +1,15 @@
-const bodyEl = document.querySelector("body");
+function calculateLoan() {
+  loanAmountValue = document.getElementById("loan-amount").value;
 
-bodyEl.addEventListener("mousemove", (event) => {
-  const xPos = event.offsetX;
-  const yPos = event.offsetY;
-  const spanEl = document.createElement("span");
-  spanEl.style.left = xPos + "px";
-  spanEl.style.top = yPos + "px";
-  const size = Math.random() * 100;
-  spanEl.style.width = size + "px";
-  spanEl.style.height = size + "px";
-  bodyEl.appendChild(spanEl);
-  setTimeout(() => {
-    spanEl.remove();
-  }, 3000);
-});
+  interestRateValue = document.getElementById("interest-rate").value;
+
+  MonthsToPayValue = document.getElementById("months-to-pay").value;
+
+  interest = (loanAmountValue * (interestRateValue * 0.01)) / MonthsToPayValue;
+
+  monthlyPayment = (loanAmountValue / MonthsToPayValue + interest).toFixed(2);
+
+  document.getElementById(
+    "payment"
+  ).innerHTML = `Monthly Payment: ${monthlyPayment}`;
+}

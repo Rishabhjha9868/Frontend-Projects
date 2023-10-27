@@ -1,32 +1,39 @@
-body {
+body{
+  padding: 0;
   margin: 0;
+  display: flex;
   height: 100vh;
-  background-color: black;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-span {
-  background: url("https://cdn2.iconfinder.com/data/icons/free-1/128/Love__heart_like-256.png");
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  pointer-events: none;
-  background-size: cover;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  animation: animate 6s linear;
+.container{
+  background: darkcyan;
+  color: aliceblue;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-@keyframes animate {
-  0% {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    filter: hue-rotate(0);
-  }
-  100% {
-    transform: translate(-50%, -5000%);
-    opacity: 0;
-    filter: hue-rotate(720deg);
-  }
+.input{
+  width: 100%;
+  font-size: 20px;
+  height: 30px;
+}
+
+.payment{
+  font-weight: 600;
+  font-size: 20px;
+}.container {
+  height: 40vh;
+  width: 16vw;
+  margin: 10vh 30vw;
+  padding: 20px;
+  background: rgb(32, 178, 117);
+
+  border-radius: 5px;
+}
+.input {
+  box-sizing: content-box;
+  margin-bottom: 10px;
 }
