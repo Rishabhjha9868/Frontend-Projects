@@ -4,52 +4,20 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Loan Calculator</title>
     <link rel="stylesheet" href="style.css" />
+    <title>Multiplication App</title>
   </head>
   <body>
     <div class="container">
-      <h1>Loan Calculator</h1>
-      <p>
-        Loan Amount $
-        <input
-          onchange="calculateLoan()"
-          class="input"
-          type="number"
-          id="loan-amount"
-          min="1"
-          max="500000"
-          value="10000"
-        />
-      </p>
-      <p>
-        Interest Rate %
-        <input
-          onchange="calculateLoan()"
-          class="input"
-          type="number"
-          id="interest-rate"
-          min="0"
-          max="100"
-          value="10"
-          step=".1"
-        />
-      </p>
-      <p>
-        Months to pay
-        <input
-          onchange="calculateLoan()"
-          class="input"
-          type="number"
-          id="months-to-pay"
-          min="6"
-          max="48"
-          value="12"
-        />
-      </p>
-      <p class="payment" id="payment">Monthly Payment:</p>
+      <h4>score:</h4>
+      <h2>What is 2 multiply by 3?</h2>
+      <input
+        type="number"
+        placeholder="Enter your answer"
+        class="input"
+        id="input"
+      />
+      <button class="btn" id="btn">Submit</button>
     </div>
-
-    <script src="index.js"></script>
   </body>
 </html>
