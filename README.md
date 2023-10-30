@@ -8,7 +8,7 @@ BMI calculator using HTML ,CSS and JAVASCRIPT.
 
 => There are more than eight project upload in the Folder.
 
-=> Dark mode toggle button.
+1.Dark mode toggle button.
 This is the project, which i refer to all the viewers.
 =>This is english dictionary and in this project.
 =>My last project is  feedback UI.
