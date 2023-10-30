@@ -10,7 +10,7 @@ BMI calculator using HTML ,CSS and JAVASCRIPT.
 
 1.Dark mode toggle button.
 This is the project, which i refer to all the viewers.
-=>This is english dictionary and in this project.
+2.This is english dictionary and in this project.
 =>My last project is  feedback UI.
 => My last project is Heart trail animation.
 => Last project is Loan calculator.
