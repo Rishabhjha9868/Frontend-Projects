@@ -5,7 +5,6 @@ On the template wherever you move your cursor that will become clear and rest of
 On the Anime pic generator i made a button on which just click, Results a new anime pic i update,
 
 BMI calculator using HTML ,CSS and JAVASCRIPT.
-
 => There are more than eight project upload in the Folder.
 
 1.Dark mode toggle button.
