@@ -1,30 +1,27 @@
-const containerEl = document.querySelector(".container");
+const btnEl = document.getElementById("btn");
+const emojiNameEl = document.getElementById("emoji-name");
 
-for (let index = 0; index < 10; index++) {
-  const colorContainerEl = document.createElement("div");
-  colorContainerEl.classList.add("color-container");
-  containerEl.appendChild(colorContainerEl);
-}
+const emoji = [];
 
-const colorContainerEls = document.querySelectorAll(".color-container");
+async function getEmoji() {
+  let response = await fetch(
+    "https://emoji-api.com/emojis?access_key=773b58f681fb786fafdb8392e8b8a75ddc177fd1"
+  );
 
-generateColors();
+  data = await response.json();
 
-function generateColors() {
-  colorContainerEls.forEach((colorContainerEl) => {
-    const newColorCode = randomColor();
-    colorContainerEl.style.backgroundColor = "#" + newColorCode;
-    colorContainerEl.innerText = "#" + newColorCode;
-  });
-}
-
-function randomColor() {
-  const chars = "0123456789abcdef";
-  const colorCodeLength = 6;
-  let colorCode = "";
-  for (let index = 0; index < colorCodeLength; index++) {
-    const randomNum = Math.floor(Math.random() * chars.length);
-    colorCode += chars.substring(randomNum, randomNum + 1);
+  for (let i = 0; i < 1500; i++) {
+    emoji.push({
+      emojiName: data[i].character,
+      emojiCode: data[i].unicodeName,
+    });
   }
-  return colorCode;
 }
+
+getEmoji();
+
+btnEl.addEventListener("click", () => {
+  const randomNum = Math.floor(Math.random() * emoji.length);
+  btnEl.innerText = emoji[randomNum].emojiName;
+  emojiNameEl.innerText = emoji[randomNum].emojiCode;
+});
