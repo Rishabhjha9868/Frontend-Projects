@@ -16,4 +16,4 @@ This is the project, which i refer to all the viewers.
 => This is Multiplication App.
 => This is Note App.
 => This is Random Color Generator.
-=> This is
+=> This is Random 
