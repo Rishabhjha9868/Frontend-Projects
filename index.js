@@ -1,33 +1,15 @@
-const btnEl = document.getElementById("btn");
-const quoteEl = document.getElementById("quote");
-const authorEl = document.getElementById("author");
+const textareaEl = document.getElementById("textarea");
+const totalCounterEl = document.getElementById("total-counter");
+const remainingCounterEl = document.getElementById("remaining-counter");
 
-const apiURL = "https://api.quotable.io/random";
+textareaEl.addEventListener("keyup", () => {
+  updateCounter();
+});
 
-async function getQuote() {
-  try {
-    btnEl.innerText = "Loading...";
-    btnEl.disabled = true;
-    quoteEl.innerText = "Updating...";
-    authorEl.innerText = "Updating...";
-    const response = await fetch(apiURL);
-    const data = await response.json();
-    const quoteContent = data.content;
-    const quoteAuthor = data.author;
-    quoteEl.innerText = quoteContent;
-    authorEl.innerText = "~ " + quoteAuthor;
-    btnEl.innerText = "Get a quote";
-    btnEl.disabled = false;
-    console.log(data);
-  } catch (error) {
-    console.log(error);
-    quoteEl.innerText = "An error happened, try again later";
-    authorEl.innerText = "An error happened";
-    btnEl.innerText = "Get a quote";
-    btnEl.disabled = false;
-  }
+updateCounter();
+
+function updateCounter() {
+  totalCounterEl.innerText = textareaEl.value.length;
+  remainingCounterEl.innerText =
+    textareaEl.getAttribute("maxLength") - textareaEl.value.length;
 }
-
-getQuote();
-
-btnEl.addEventListener("click", getQuote);
