@@ -21,4 +21,4 @@ This is the project, which i refer to all the viewers.
 => This is Random Quote generator.
 => Real time character counter.
 => This is Sticky Navbar.
-=> This is Temperature
+=> This is Temperature Converter.
