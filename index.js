@@ -1,18 +1,24 @@
-const navbarEl = document.querySelector(".navbar");
+const celsiusEl = document.getElementById("celsius");
+const fahrenheitEl = document.getElementById("fahrenheit");
+const kelvinEl = document.getElementById("kelvin");
 
-const bottomContainerEl = document.querySelector(".bottom-container");
+function computeTemp(event) {
+  const currentValue = +event.target.value;
 
-console.log(navbarEl.offsetHeight);
-
-console.log(bottomContainerEl.offsetTop);
-
-window.addEventListener("scroll", () => {
-  if (
-    window.scrollY >
-    bottomContainerEl.offsetTop - navbarEl.offsetHeight - 50
-  ) {
-    navbarEl.classList.add("active");
-  } else {
-    navbarEl.classList.remove("active");
+  switch (event.target.name) {
+    case "celsius":
+      kelvinEl.value = (currentValue + 273.32).toFixed(2);
+      fahrenheitEl.value = (currentValue * 1.8 + 32).toFixed(2);
+      break;
+    case "fahrenheit":
+      celsiusEl.value = ((currentValue - 32) / 1.8).toFixed(2);
+      kelvinEl.value = ((currentValue - 32) / 1.8 + 273.32).toFixed(2);
+      break;
+    case "kelvin":
+      celsiusEl.value = (currentValue - 273.32).toFixed(2);
+      fahrenheitEl.value = ((currentValue - 273.32) * 1.8 + 32).toFixed(2);
+      break;
+    default:
+      break;
   }
-});
+}
