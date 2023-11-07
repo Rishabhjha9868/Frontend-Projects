@@ -1,14 +1,6 @@
-const btnEl = document.querySelector(".btn");
-const closeIconEl = document.querySelector(".close-icon");
-const trailerContainerEl = document.querySelector(".trailer-container");
-const videoEl = document.querySelector("video");
+// const formEl = document.querySelector(".form");
+// const btnEl = document.querySelector(".btn");
 
-btnEl.addEventListener("click", () => {
-  trailerContainerEl.classList.remove("active");
-});
-
-closeIconEl.addEventListener("click", () => {
-  trailerContainerEl.classList.add("active");
-  videoEl.pause();
-  videoEl.currentTime = 0;
-});
+// btnEl.addEventListener("event", () => {
+//   btn.style.remove(btnEl);
+// });
