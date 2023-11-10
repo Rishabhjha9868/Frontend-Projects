@@ -4,27 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice</title>
     <link rel="stylesheet" href="style.css" />
-    <title>password</title>
   </head>
   <body>
-    <div class="input-box">
-      <input type="password" placeholder="password" id="password" />
-      <img src="eye-close.png" id="eyeicon" />
+    <div class="info hide-detail" id="userBox">
+      <img src="timepass.png" onclick="openinfo()" />
+      <div class="user">
+        <h1>John Smith</h1>
+        <p>Working as a product manager at <span> Microsoft Inc.</span></p>
+        <p>From: California, United States</p>
+        <a href="#">Connect with me</a>
+      </div>
+      <div class="close" onclick="closeinfo()"></div>
     </div>
     <script>
-      let eyeicon = document.getElementById("eyeicon");
-      let password = document.getElementById("password");
-
-      eyeicon.onclick = function () {
-        if (password.type == "password") {
-          passsword.type = "text";
-          eyeicon.src = "eye-open.png";
-        } else {
-          passsword.type = "password";
-          eyeicon.src = "eye-close.png";
-        }
-      };
+      let userBox = document.getElementById("userBox");
+      function openinfo() {
+        userBox.classList.remove("hide-detail");
+      }
+      function closeinfo() {
+        userBox.classList.add("hide-detail");
+      }
     </script>
   </body>
 </html>
