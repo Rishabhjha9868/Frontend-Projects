@@ -4,28 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practice</title>
+    <title>Template 2</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="info hide-detail" id="userBox">
-      <img src="timepass.png" onclick="openinfo()" />
-      <div class="user">
-        <h1>John Smith</h1>
-        <p>Working as a product manager at <span> Microsoft Inc.</span></p>
-        <p>From: California, United States</p>
-        <a href="#">Connect with me</a>
+    <div class="container">
+      <nav>
+        <div><img src="images/logo.png" class="image" /></div>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Explore</a></li>
+          <li><a href="">Places</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </nav>
+   
+        <h1 class="Title">Thailand</h1>
       </div>
-      <div class="close" onclick="closeinfo()"></div>
     </div>
-    <script>
-      let userBox = document.getElementById("userBox");
-      function openinfo() {
-        userBox.classList.remove("hide-detail");
-      }
-      function closeinfo() {
-        userBox.classList.add("hide-detail");
-      }
-    </script>
   </body>
 </html>
