@@ -4,25 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template 2</title>
+    <title>Instagram navigation</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/faa71b536d.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <div class="container">
-      <nav>
-        <div><img src="images/logo.png" class="image" /></div>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Explore</a></li>
-          <li><a href="">Places</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact Us</a></li>
-        </ul>
-      </nav>
-   
-        <h1 class="Title">Thailand</h1>
-      </div>
+    <div class="navbar">
+      <ul>
+        <li value="0"><i class="fa-solid fa-house"></i></li>
+        <li value="1"><i class="fa-solid fa-heart"></i></li>
+        <li value="2"><i class="fa-solid fa-plus"></i></li>
+        <li value="3"><i class="fa-solid fa-user"></i></li>
+        <li value="4"><i class="fa-solid fa-gear"></i></li>
+        <div id="circle"><i class="fa-solid fa-plus"></i></div>
+      </ul>
     </div>
+    <script>
+      let links = document.getElementsByTagName("li");
+      let circle = document.getElementById("circle");
+
+      for (link of links) {
+        link.onclick = function () {
+          circle.style.left = 80 * this.value + "px";
+          circle.innerHTML = this.innerHTML;
+          this.style.opacity = "0";
+        };
+      }
+    </script>
   </body>
 </html>
