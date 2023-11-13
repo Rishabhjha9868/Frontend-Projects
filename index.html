@@ -4,35 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instagram navigation</title>
+    <title>Accordian</title>
     <link rel="stylesheet" href="style.css" />
-    <script
-      src="https://kit.fontawesome.com/faa71b536d.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
-    <div class="navbar">
-      <ul>
-        <li value="0"><i class="fa-solid fa-house"></i></li>
-        <li value="1"><i class="fa-solid fa-heart"></i></li>
-        <li value="2"><i class="fa-solid fa-plus"></i></li>
-        <li value="3"><i class="fa-solid fa-user"></i></li>
-        <li value="4"><i class="fa-solid fa-gear"></i></li>
-        <div id="circle"><i class="fa-solid fa-plus"></i></div>
-      </ul>
-    </div>
-    <script>
-      let links = document.getElementsByTagName("li");
-      let circle = document.getElementById("circle");
-
-      for (link of links) {
-        link.onclick = function () {
-          circle.style.left = 80 * this.value + "px";
-          circle.innerHTML = this.innerHTML;
-          this.style.opacity = "0";
-        };
-      }
-    </script>
+    <ul class="accordian">
+      <li>
+        <input type="radio" name="accordian" id="first" checked />
+        <label for="first">Product</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+            nostrum. Facere, autem, laborum aliquam voluptatum exercitationem
+            dolore velit non dolores soluta, eligendi dolor hic ullam illo amet
+            impedit cum molestias! Ab eligendi aspernatur officiis iusto eius
+            harum a doloremque magni placeat iure quod maiores earum numquam
+            quasi, laudantium quaerat nisi at deleniti dignissimos architecto
+            repellat aut voluptatibus? Soluta hic itaque quos, consectetur
+            quibusdam aliquam quasi, voluptates labore obcaecati, consequatur
+            distinctio.
+          </p>
+        </div>
+      </li>
+      <li>
+        <input type="radio" name="accordian" id="second" />
+        <label for="second">Information</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+            nostrum. Facere, autem, laborum aliquam voluptatum exercitationem
+            dolore velit non dolores soluta, eligendi dolor hic ullam illo amet
+            impedit cum molestias! Ab eligendi aspernatur officiis iusto eius
+            harum a doloremque magni placeat iure quod maiores earum numquam
+            quasi, laudantium quaerat nisi at deleniti dignissimos architecto
+            repellat aut voluptatibus? Soluta hic itaque quos, consectetur
+            quibusdam aliquam quasi, voluptates labore obcaecati, consequatur
+            distinctio.
+          </p>
+        </div>
+      </li>
+      </li>
+      <li>
+        <input type="radio" name="accordian" id="Third" />
+        <label for="Third">Questions</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+            nostrum. Facere, autem, laborum aliquam voluptatum exercitationem
+            dolore velit non dolores soluta, eligendi dolor hic ullam illo amet
+            impedit cum molestias! Ab eligendi aspernatur officiis iusto eius
+            harum a doloremque magni placeat iure quod maiores earum numquam
+            quasi, laudantium quaerat nisi at deleniti dignissimos architecto
+            repellat aut voluptatibus? Soluta hic itaque quos, consectetur
+            quibusdam aliquam quasi, voluptates labore obcaecati, consequatur
+            distinctio.
+          </p>
+        </div>
+      </li>
+      </li>
+      <li>
+        <input type="radio" name="accordian" id="Fourth" />
+        <label for="Fourth">Guides</label>
+        <div class="content">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi,
+            nostrum. Facere, autem, laborum aliquam voluptatum exercitationem
+            dolore velit non dolores soluta, eligendi dolor hic ullam illo amet
+            impedit cum molestias! Ab eligendi aspernatur officiis iusto eius
+            harum a doloremque magni placeat iure quod maiores earum numquam
+            quasi, laudantium quaerat nisi at deleniti dignissimos architecto
+            repellat aut voluptatibus? Soluta hic itaque quos, consectetur
+            quibusdam aliquam quasi, voluptates labore obcaecati, consequatur
+            distinctio.
+          </p>
+        </div>
+      </li>
+    </ul>
   </body>
 </html>
