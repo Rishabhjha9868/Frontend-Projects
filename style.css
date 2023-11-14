@@ -1,62 +1,79 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
-body {
-  background: #e3edf7;
-}
-
-.accordian {
-  margin: 60px auto;
-  width: 600px;
-}
-
-.accordian li {
-  list-style: none;
+.coontainer {
   width: 100%;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 8px;
-  background-color: pink;
+  height: 100vh;
+  background: linear-gradient(45deg, #4f639b, #fff);
 }
 
-.accordian li label {
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-label::before {
-  content: "+";
-  margin-right: 10px;
-  font-size: 24px;
-  font-weight: 600;
-}
-
-input[type="radio"] {
+#modelbox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
   display: none;
 }
 
-.accordian .content {
-  color: #555;
-  padding: 0 10px;
-  line-height: 26px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s padding 0.5s;
+.offer-text {
+  padding: 20px 40px 40px 40px;
+  font-size: 14px;
+  line-height: 22px;
 }
 
-.accordian input[type="radio"]:checked + label + .content {
-  max-height: 400px;
-  padding: 10px 10px 20px;
+.offer-text h2 {
+  font-size: 38px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 
-.accordian input[type="radio"]:checked + label::before {
-  content: "-";
+.offer-text small {
+  display: inline-block;
+  color: #ff2b4e;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.offer-text form {
+  margin-top: 30px;
+  display: flex;
+  background: #efefef;
+  border-bottom: 4px;
+}
+
+.offer-text form input {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 12px 10px;
+}
+
+.offer-text form button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: #ff2b4e;
+  color: #fff;
+  padding: 0 15px;
+  border-radius: 4px;
+}
+
+.close-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
 }
