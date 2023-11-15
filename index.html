@@ -4,39 +4,53 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Model POP-UP</title>
+    <title>Music website</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="images/close.png" type="image/x-icon" />
   </head>
   <body>
-    <div class="coontainer"></div>
-    <div id="modelbox">
-      <img src="images/banner.png" width="100%" />
-      <div class="offer-text">
-        <h2>Get 15% off</h2>
-        <small>on all beauty product</small>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
-          veritatis libero tempora temporibus hic ullam totam, quibusdam
-          repellat rerum deserunt facere, qui reprehenderit ipsum architecto
-          voluptas earum voluptate similique sit!
-        </p>
-        <form>
-          <input type="email" placeholder="Email Address" />
-          <button type="submit">Subscribe</button>
-        </form>
+    <div class="container">
+      <div class="navbar">
+        <img src="logo.png" class="logo" />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Specifications</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
       </div>
-      <img src="images/close.png" class="close-icon" onclick="closemodel()" />
+      <div class="content">
+        <div class="left-col">
+          <h1>
+            The <br />
+            Real <br />
+            <img src="rish.jpg" height="120px" />
+            Sound <br />
+          </h1>
+        </div>
+        <div class="right-col">
+          <p>Click here to listen</p>
+          <img src="play.png" id="icon" />
+        </div>
+      </div>
     </div>
-    <script>
-      let modelbox = document.getElementById("modelbox");
-      document.onmouseleave = function () {
-        modelbox.style.display = "block";
-      };
+    <audio id="mySong">
+      <source src="risu.mp3" type="audio/mp3" />
+    </audio>
 
-      function closemodel() {
-        modelbox.style.display = "none";
-      }
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
+
+      icon.onclick = function () {
+        if (mySong.paused) {
+          mySong.play();
+          icon.src = "pause.png";
+        } else {
+          mySong.pause();
+          icon.src = "play.png";
+        }
+      };
     </script>
   </body>
 </html>
